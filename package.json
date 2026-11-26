@@ -1,0 +1,42 @@
+{
+  "name": "pi-emoji-complete",
+  "version": "1.0.0",
+  "description": "Slack/Claude-style :shortcode: emoji autocomplete for the Pi editor",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "emoji",
+    "autocomplete"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osher/pi-emoji-complete.git"
+  },
+  "homepage": "https://github.com/osher/pi-emoji-complete#readme",
+  "bugs": {
+    "url": "https://github.com/osher/pi-emoji-complete/issues"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:emoji": "node scripts/extract-emoji.js",
+    "prepack": "npm run build:emoji",
+    "test:unit": "mocha test/emoji-complete.test.js",
+    "test:e2e": "mocha test/e2e.test.js",
+    "test": "npm run test:e2e && npm run test:unit"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/emoji-complete.js"
+    ]
+  },
+  "devDependencies": {
+    "gemoji": "^8.1.0",
+    "mocha": "^11.1.0"
+  }
+}
