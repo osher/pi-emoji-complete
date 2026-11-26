@@ -2,6 +2,8 @@
 
 Slack / Claude-style `:shortcode:` emoji autocomplete for the [Pi](https://pi.dev) editor.
 
+![pi-emoji-complete demo](./assets/screenshot.png)
+
 ## Features
 
 - Triggers on `:<query>` (2+ characters) at the start of a line or after whitespace / opening punctuation
